@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import { REATAURATN_URL } from "../utils/constants";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
     
@@ -42,11 +43,13 @@ const Body = () => {
             </div>
             <div className="restaurant-container">
                {
-                filterResturents.map(restaurant => <RestaurantCard key={restaurant?.info.id} restaurant={restaurant} />)
-               }
+                filterResturents.map(restaurant => (<Link key = {restaurant?.info.id} to = {"/restaurants/"+restaurant?.info.id} className="link" >
+                    <RestaurantCard restaurant={restaurant} />
+                </Link>)  
+               )}
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Body;

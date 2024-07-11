@@ -67,3 +67,12 @@
 .login {
     margin: 0px 20px;
 }
+
+.link {
+    color: black;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #00F
+}

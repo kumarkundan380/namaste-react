@@ -13,7 +13,7 @@ const RestaurantCard = (props) => {
             <h4>{costForTwo}</h4>
             <h4>{sla.slaString} minutes</h4>
         </div>
-    )
-}
+    );
+};
 
 export default RestaurantCard;
